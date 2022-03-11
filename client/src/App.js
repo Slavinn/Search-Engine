@@ -1,14 +1,13 @@
 import Search from "./components/Search/Search";
+import SearchResultProvider from "./components/store/SearchResultProvider";
+
 import "./App.css";
 
 function App() {
   return (
-    <div>
-      <div className="search-container">
-        <h2 className="search-title">Search Engine</h2>
-        <Search></Search>
-      </div>
-    </div>
+    <SearchResultProvider>
+      <Search />
+    </SearchResultProvider>
   );
 }
 

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Button from "../../UI/Button/Button";
+import Input from "../../UI/Input/Input";
+import classes from "./SearchForm.module.css";
 
 const SearchForm = (props) => {
   const [query, setQuery] = useState("");
@@ -14,14 +17,14 @@ const SearchForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <div>
-        <input
-          className="search-input-box"
+        <Input
+          className={classes["search-input-box"]}
           type="text"
           value={query}
           onChange={searchChangeHandler}
           id="search-text"
         />
-        <button className="search-btn">Search</button>
+        <Button className={classes["search-btn"]}>Search</Button>
       </div>
     </form>
   );

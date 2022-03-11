@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import SearchResultContext from "../store/searchresults-context";
-import SearchResultProvider from "../store/SearchResultProvider";
-import "./Search.css";
 import SearchForm from "./SearchForm";
+import ResultPage from "../Results/ResultPage";
+import classes from "./Search.module.css";
 
-function Search(props) {
+function Search() {
   const ctxSearchResult = useContext(SearchResultContext);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -14,12 +14,13 @@ function Search(props) {
     setError(null);
     try {
       const response = await fetch(`http://localhost:5000/search/${query}`);
-      const data = await response.json();
-      if (response.ok) {
-        throw new Error("Somethig went wrong!");
+
+      if (!response.ok) {
+        throw new Error(response);
       }
-      ctxSearchResult.addResults(data.hits);
+      const data = await response.json();
       ctxSearchResult.addSearch(data.query);
+      ctxSearchResult.addResults(data.hits);
     } catch (error) {
       setError(error);
     }
@@ -32,12 +33,11 @@ function Search(props) {
   }
 
   return (
-    <SearchResultProvider>
+    <div className={classes["search-container"]}>
+      <h2 className={classes["search-title"]}>Search Engine</h2>
       <SearchForm fetchQuery={fetchSearchQueryHandler} />
-      {ctxSearchResult.results.map((result) => {
-        <p>{result}</p>;
-      })}
-    </SearchResultProvider>
+      {<ResultPage />}
+    </div>
   );
 }
 

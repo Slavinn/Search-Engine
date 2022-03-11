@@ -9,23 +9,22 @@ const defaultSearchState = {
 
 const searchReducer = (state, action) => {
   if (action.type === "ADD_SEARCH") {
-    console.log(action.search);
     return {
-      search: action.search,
       ...state,
+      search: action.search,
     };
   }
   if (action.type === "ADD_RESULTS") {
     return {
-      results: action.results,
       ...state,
+      results: action.results,
     };
   }
   if (action.type === "ADD_HISTORY") {
     const updatedHistory = [state.history, ...action.history];
     return {
-      history: updatedHistory,
       ...state,
+      history: updatedHistory,
     };
   }
   if (action.type === "CLEAR_SEARCH") {
@@ -65,7 +64,7 @@ const SearchResultProvider = (props) => {
   };
 
   return (
-    <SearchResultContext.Provider value={searchState}>
+    <SearchResultContext.Provider value={searchContext}>
       {props.children}
     </SearchResultContext.Provider>
   );

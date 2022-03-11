@@ -1,0 +1,14 @@
+.search-title {
+  text-align: center;
+  margin: 20rem 0 2rem 0;
+}
+.search-container {
+  max-width: 50rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.search {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
