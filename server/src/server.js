@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const algoliasearch = require("algoliasearch");
+require("dotenv").config();
 
-const client = algoliasearch("L3GPNXZ92X", "3dacf88b3f6cceea33bf86634058a9d1");
+const client = algoliasearch(process.env.APP_ID, process.env.API_KEY);
 const index = client.initIndex("media-1647020271");
 const app = express();
 const port = 5000;
