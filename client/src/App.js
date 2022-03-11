@@ -1,3 +1,4 @@
+import Search from "./components/Search/Search";
 import "./App.css";
 
 function App() {
@@ -5,10 +6,7 @@ function App() {
     <div>
       <div className="search-container">
         <h2 className="search-title">Search Engine</h2>
-        <div className="search-box">
-          <input className="search-input-box" />
-          <button className="search-btn">Search</button>
-        </div>
+        <Search></Search>
       </div>
     </div>
   );

@@ -14,20 +14,3 @@
   align-items: center;
   justify-items: center;
 }
-
-.search-title {
-  margin: 20rem 0 2rem 0;
-}
-
-.searh-box {
-}
-
-.search-input-box {
-  height: 2rem;
-  width: 30rem;
-}
-
-.search-btn {
-  height: 2rem;
-  width: 5rem;
-}

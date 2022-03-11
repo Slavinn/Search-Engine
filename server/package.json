@@ -2,10 +2,11 @@
   "name": "search-engine",
   "version": "1.0.0",
   "description": "Search Engine",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon -L src/server"
   },
   "repository": {
     "type": "git",
@@ -19,10 +20,10 @@
   },
   "homepage": "https://github.com/Slavinn/Search-Engine#readme",
   "dependencies": {
+    "algoliasearch": "^4.12.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongodb": "^4.4.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "wolfram-alpha-api": "https://products.wolframalpha.com/api/libraries/javascript/wolfram-alpha-api-1.0.0-rc.1.tgz"
   }
 }
