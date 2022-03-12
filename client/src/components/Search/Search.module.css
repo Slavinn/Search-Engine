@@ -13,9 +13,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.results {
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-}

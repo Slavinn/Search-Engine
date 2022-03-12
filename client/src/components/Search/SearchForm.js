@@ -15,7 +15,7 @@ const SearchForm = (props) => {
     props.fetchQuery(query);
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form className={props.className} onSubmit={submitHandler}>
       <div>
         <Input
           className={classes["search-input-box"]}

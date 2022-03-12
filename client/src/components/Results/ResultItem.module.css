@@ -1,15 +1,28 @@
 .resultItem {
-  max-width: 50%;
+  width: 40rem;
   max-height: 5%;
-  margin: 0.3rem;
-  justify-self: center;
+  margin: 0.5rem;
+  justify-self: flex-start;
   text-align: justify;
 }
 
-content {
-  text-overflow: ellipsis;
-  overflow: hidden;
+.resultItem h3 {
+  margin-bottom: 1rem;
+}
+
+.resultItem p {
+  margin-bottom: 1rem;
+}
+
+.post-details {
+  display: flex;
+}
+
+.content {
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  line-height: 1.4;
 }

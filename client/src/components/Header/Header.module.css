@@ -1,0 +1,16 @@
+.header {
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  padding: 2rem;
+}
+
+.header-search-form {
+  margin-left: 5rem;
+}
+
+.navigation {
+  width: 30%;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
