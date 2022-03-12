@@ -1,0 +1,15 @@
+.resultItem {
+  max-width: 50%;
+  max-height: 5%;
+  margin: 0.3rem;
+  justify-self: center;
+  text-align: justify;
+}
+
+content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}

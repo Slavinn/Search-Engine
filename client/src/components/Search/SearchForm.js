@@ -24,7 +24,9 @@ const SearchForm = (props) => {
           onChange={searchChangeHandler}
           id="search-text"
         />
-        <Button className={classes["search-btn"]}>Search</Button>
+        <Button type="submit" className={classes["search-btn"]}>
+          Search
+        </Button>
       </div>
     </form>
   );

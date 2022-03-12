@@ -15,9 +15,10 @@ const searchReducer = (state, action) => {
     };
   }
   if (action.type === "ADD_RESULTS") {
+    const updatedResults = action.results;
     return {
       ...state,
-      results: action.results,
+      results: updatedResults,
     };
   }
   if (action.type === "ADD_HISTORY") {

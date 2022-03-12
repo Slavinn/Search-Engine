@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 app.get("/search/:query", async (req, res) => {
   const query = req.params.query;
   const response = await index.search(query);
+  console.log(response);
   if (response.hits === 0) {
     res.status(204).send({ error: "No content found" });
   } else {
